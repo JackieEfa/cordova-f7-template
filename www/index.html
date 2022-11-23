@@ -31,9 +31,11 @@
         -->
 
     <!-- Security policy updated for google fonts -->
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline' fonts.googleapis.com; media-src *; img-src 'self' data: content:; font-src 'self' data: fonts.gstatic.com;">
-    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; 
+style-src 'self' 'unsafe-inline' fonts.googleapis.com; media-src *; font-src 'self' data: fonts.gstatic.com;  
+img-src 'self' data: content: maps.gstatic.com *.googleapis.com *.ggpht.com; 
+script-src 'self' maps.googleapis.com 'unsafe-inline';
+connect-src 'self' https://*.googleapis.com *.google.com https://*.gstatic.com data: blob:;"> <!--make sure to update security policy! -->
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
     <meta name="color-scheme" content="light dark">
@@ -54,8 +56,8 @@
                 <div class="page-content">
                     <h1> My Current Location! </h1>
                     <div id="currentPOS">Loading Position. . . . Please Wait. . . </div>
-                    <button id="startwatch"> Following Me</button>
-                    <button id="stopwatch"> Stop Following Me</button>
+                    <a href="/page2/" class="button button-fill color-blue"> MAP</a>
+ 
                 </div>
             </div>
         </div>
@@ -66,6 +68,7 @@
     <script src="cordova.js"></script>
     <script src="js/framework7-bundle.min.js"></script>
     <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLaPctqMxEck5HiQQFL64nLakrJcDstuk" async defer></script>
     <script src="js/index.js"></script>
 </body>
 
